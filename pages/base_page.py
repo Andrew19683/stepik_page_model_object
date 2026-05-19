@@ -16,3 +16,10 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+    
+    def is_element_text_equal(self, how, what, expected_text):
+        try:
+            element = self.browser.find_element(how, what)
+            return element.text == expected_text
+        except (NoSuchElementException):
+            return False
