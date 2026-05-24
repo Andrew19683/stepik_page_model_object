@@ -14,3 +14,7 @@ class ProductPageLocators():
     SUCCESS_ITEM_NAME_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success:nth-child(1) .alertinner strong")
     SUCCESS_PROMOCODE_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success:nth-child(2) .alertinner strong")
     CART_PRICE = (By.CSS_SELECTOR, "#messages .alert-info .alertinner p strong")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
