@@ -6,6 +6,9 @@ class MainPageLocators():
     LOGIN_URL = "login"
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".basket-mini a.btn-default")
+    BASKET_HEADER = (By.CSS_SELECTOR, ".basket-mini")
+    BASKET_EMPTY_TEXT = (By.CSS_SELECTOR, "#content_inner")
 
 class ProductPageLocators():
     ITEM_NAME = (By.CSS_SELECTOR, ".product_main h1")

@@ -2,6 +2,11 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+def pytest_configure(config):
+    config.addinivalue_line("markers", "positive: positive tests")
+    config.addinivalue_line("markers", "negative: negative tests")
+    config.addinivalue_line("markers", "parametrized: parametrized tests")
+
 def pytest_addoption(parser):
     parser.addoption('--language', action='store', default=None,
                      help="Choose language: ru, en, etc.")
