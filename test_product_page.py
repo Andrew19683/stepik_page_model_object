@@ -67,3 +67,9 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
     page.open()
     page.add_product_to_basket()
     assert page.is_disappeared(*ProductPageLocators.SUCCESS_PROMOCODE_MESSAGE), "Success message is not disappeared, but should be"
+
+def test_guest_cant_see_product_in_basket(browser):
+    page = ProductPage(browser, link)
+    page.open()
+    page.go_to_basket_page()
+    page.should_be_empty_basket()
