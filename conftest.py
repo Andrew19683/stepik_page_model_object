@@ -7,6 +7,7 @@ def pytest_configure(config):
     config.addinivalue_line("markers", "negative: negative tests")
     config.addinivalue_line("markers", "parametrized: parametrized tests")
     config.addinivalue_line("markers", "login_guest: login tests for guest users")
+    config.addinivalue_line("markers", "need_review: tests that need to be reviewed")
 
 def pytest_addoption(parser):
     parser.addoption('--language', action='store', default=None,
